@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "67119dae-4268-4f7d-8188-cbdbb3dec8ed",
+		"name": "order-management-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7029/api/Order/GetOrders",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"Order",
+						"GetOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"createOrderRequestItems\": [\r\n    {\r\n      \"customerOrderNo\": \"ORD_16\",\r\n      \"outputAddress\": \"Ay mah. Çam sok. İstanbul\",\r\n      \"destinationAddress\": \"Mit. mah. Kam sok. İzmir\",\r\n      \"quantity\": 1,\r\n      \"quantityUnit\": \"Adet\",\r\n      \"weight\": 50,\r\n      \"weightUnit\": \"Kg\",\r\n      \"orderItem\": {\r\n        \"code\": \"ITM_3\",\r\n        \"name\": \"Buzdolabı\"\r\n      },\r\n      \"note\": \"Ürün dik taşınması gerekmetedir.\"\r\n    },\r\n    {\r\n      \"customerOrderNo\": \"ORD_17\",\r\n      \"outputAddress\": \"Eğitim mah. Abdibey sok. İstanbul\",\r\n      \"destinationAddress\": \"Yalı mah. 6426. sok. İzmir\",\r\n      \"quantity\": 2,\r\n      \"quantityUnit\": \"Adet\",\r\n      \"weight\": 50,\r\n      \"weightUnit\": \"Kg\",\r\n      \"orderItem\": {\r\n        \"code\": \"ITM_10\",\r\n        \"name\": \"Çamaşır Makinesi\"\r\n      },\r\n      \"note\": \"Ürün dik taşınması gerekmetedir.\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/Order/CreateOrder",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"Order",
+						"CreateOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateOrderStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerOrderNo\": \"ORD_11\",\r\n  \"statusId\": 2 // Yola Çıktı\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7029/api/Order/UpdateOrderStatus",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"Order",
+						"UpdateOrderStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7029/api/OrderStatus/GetOrderStatus",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7029",
+					"path": [
+						"api",
+						"OrderStatus",
+						"GetOrderStatus"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
