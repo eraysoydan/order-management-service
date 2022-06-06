@@ -1,5 +1,5 @@
 # order-management-service
 
-database backup > Docs
+Database backup > Docs
 
-postman collection > Docs
+Postman collection > Docs
